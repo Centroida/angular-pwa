@@ -8,15 +8,19 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "precache": "sw-precache --verbose --config=sw-precache-config.js"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^4.0.2",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
+    "@angular/flex-layout": "^2.0.0-beta.7",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
+    "@angular/material": "^2.0.0-beta.3",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
@@ -35,10 +39,11 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
+    "sw-precache": "^5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
