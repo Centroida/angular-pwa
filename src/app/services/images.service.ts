@@ -11,7 +11,7 @@ export class ImagesService {
 
   public getCats() {
 
-    return this.http.get("http://milenabooks.azurewebsites.net/api/Books", this.getRequestHeaders())
+    return this.http.get("https://jsonplaceholder.typicode.com/users/100/photos?albumId=1", this.getRequestHeaders())
       .map(res => res.json());
   }
 
@@ -20,6 +20,7 @@ export class ImagesService {
   }
   public getRequestHeaders() {
     const headers: Headers = new Headers();
+    headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     return new RequestOptions({headers: headers});
   }

@@ -6,7 +6,7 @@
     <div class="cats-group" fxFlex.gt-sm="33" fxFlex.gt-md="25" fxFlex="100" *ngFor="let cat of cats | async">
       <md-card>
         <div class="picture-wrapper">
-          <img md-card-image src="{{cat}}">
+          <img md-card-image src="{{cat.thumbnailUrl}}">
         </div>
         <md-card-content>
           <p>
