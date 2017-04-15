@@ -12,6 +12,7 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NoInternetComponent } from './shared/no-internet/no-internet.component';
 import {NasaService} from "./services/nasa.service";
 import {InfoComponent} from "./components/info/info.component";
+import { TuesdayComponent } from './components/tuesday/tuesday.component';
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyDwRirzSQ6qpDvjrhlACnVr03HG76xXukQ",
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     AppComponent,
     SidenavComponent,
     NoInternetComponent,
-    InfoComponent
+    InfoComponent,
+    TuesdayComponent
   ],
   imports: [
     RouterModule,

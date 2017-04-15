@@ -14,6 +14,10 @@ export class SidenavComponent implements OnInit {
       {
         name: 'Picture of the day',
         url: './info'
+      },
+      {
+        name: 'Tuesday',
+        url: './tuesday'
       }
     ];
   }
@@ -21,7 +25,4 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelectDate(date){
-    console.log("date ", date )
-  }
 }
