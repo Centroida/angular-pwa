@@ -9,6 +9,11 @@ import {AngularFireModule} from "angularfire2";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { CatsComponent } from './components/cats/cats.component';
+import { DogsComponent } from './components/dogs/dogs.component';
+import { ElephantsComponent } from './components/elephants/elephants.component';
+import {ImagesService} from "./services/images.service";
+import { NoInternetComponent } from './shared/no-internet/no-internet.component';
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyDwRirzSQ6qpDvjrhlACnVr03HG76xXukQ",
@@ -22,7 +27,11 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    CatsComponent,
+    DogsComponent,
+    ElephantsComponent,
+    NoInternetComponent
   ],
   imports: [
     RouterModule,
@@ -34,7 +43,7 @@ export const firebaseConfig = {
     MaterialModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [ImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

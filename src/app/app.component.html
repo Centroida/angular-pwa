@@ -4,11 +4,12 @@
   </button>
   <a class="branding">PWA</a>
 </md-toolbar>
-<md-sidenav-container class="app-sidenav-container app-inner">
+<md-sidenav-container class="app-inner">
   <md-sidenav #sidemenu class="app-sidenav" [mode]="isOver() ? 'over' : 'side'" [opened]="!isOver()">
     <app-sidenav></app-sidenav>
   </md-sidenav>
-  <router-outlet></router-outlet>
+  <div class="app-inner-routes">
+    <router-outlet></router-outlet>
+  </div>
 </md-sidenav-container>
-
 

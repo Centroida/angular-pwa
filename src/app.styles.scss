@@ -39,11 +39,7 @@ body {
 @keyframes animation {
   to { opacity: 0.2; }
 }
-.navigation {
-  md-list-item{
-    max-width: 100px;
-  }
-}
+
 /* $main-panel
  ------------------------------------------*/
 $mat-toolbar-height-desktop: 64px !default;
@@ -71,7 +67,9 @@ $mat-toolbar-height-mobile-landscape: 48px !default;
 md-sidenav {
   overflow-x: hidden;
   width: 15rem;
-  background-color: rgba(0,0,0,.03) !important;
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12) !important;
+  z-index: 2000;
   .mat-sidenav-focus-trap > .cdk-focus-trap-content {
     position: relative;
   }

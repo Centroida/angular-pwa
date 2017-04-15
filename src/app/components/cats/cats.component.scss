@@ -1,0 +1,20 @@
+.cats-group{
+  margin: 10px;
+}
+md-card{
+  .picture-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+  }
+  img{
+    height: 200px!important;
+    width: auto !important;
+  }
+}
+.no-connection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
