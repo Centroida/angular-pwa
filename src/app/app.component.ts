@@ -16,5 +16,9 @@ export class AppComponent {
     this.items = af.database.list('/cats');
     console.log(window.navigator.onLine);
   }
+  isOver(): boolean {
+    console.log('hereee')
+    return window.matchMedia(`(max-width: 960px)`).matches;
+  }
 }
 

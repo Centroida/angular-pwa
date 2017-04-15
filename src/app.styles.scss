@@ -44,3 +44,38 @@ body {
     max-width: 100px;
   }
 }
+/* $main-panel
+ ------------------------------------------*/
+$mat-toolbar-height-desktop: 64px !default;
+$mat-toolbar-height-mobile-portrait: 56px !default;
+$mat-toolbar-height-mobile-landscape: 48px !default;
+
+.app-inner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vh - #{$mat-toolbar-height-desktop});
+  display: flex;
+  flex-direction: row;
+}
+@media ('max-width: 600px') and (orientation: portrait) {
+  .app-inner {
+    height: calc(100vh - #{$mat-toolbar-height-mobile-portrait});
+  }
+}
+@media ('max-width: 960px') and (orientation: landscape) {
+  .app-inner {
+    height: calc(100vh - #{$mat-toolbar-height-mobile-landscape});
+  }
+}
+md-sidenav {
+  overflow-x: hidden;
+  width: 15rem;
+  background-color: rgba(0,0,0,.03) !important;
+  .mat-sidenav-focus-trap > .cdk-focus-trap-content {
+    position: relative;
+  }
+  > nav {
+    min-width: 15rem;
+  }
+}

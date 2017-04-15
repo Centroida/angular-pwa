@@ -9,6 +9,7 @@ import {
   MdMenuModule,
   MdGridListModule,
   MdToolbarModule,
+  MdSidenavModule
 
 } from "@angular/material";
 import {FlexLayoutModule} from "@angular/flex-layout";
@@ -24,7 +25,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdMenuModule,
     MdToolbarModule,
     MdGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdSidenavModule
   ],
   exports: [
     MdListModule,
@@ -36,7 +38,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdMenuModule,
     MdToolbarModule,
     MdGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdSidenavModule
   ],
   declarations: []
 })
