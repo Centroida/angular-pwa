@@ -6,12 +6,24 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from "./material/material.module";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {MenuComponent} from "./menu.component";
+import {RouterModule} from "@angular/router";
+import {StoresComponent} from "./stores.component";
+import {AnalyticsComponent} from "./analytics.component";
+import {SettingsComponent} from "./settings.component";
+import {ROUTES} from "./app.routes";
 
 @NgModule({
   declarations: [
-    AppComponent
+    StoresComponent,
+    AnalyticsComponent,
+    SettingsComponent,
+    AppComponent,
+    MenuComponent
   ],
   imports: [
+    RouterModule,
+    RouterModule.forRoot(ROUTES),
     BrowserModule,
     NoopAnimationsModule,
     FormsModule,
