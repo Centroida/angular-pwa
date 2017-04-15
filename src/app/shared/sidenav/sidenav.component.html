@@ -1,0 +1,11 @@
+<md-sidenav-container class="app-sidenav-container">
+  <md-sidenav #sidenav class="app-sidenav">
+    <div class="app-sidenav-content">
+      <md-nav-list>
+        <md-list-item *ngFor='let route of navigationRoutes' [routerLink]="route.url">
+          <a>{{route.name}}</a>
+        </md-list-item>
+      </md-nav-list>
+    </div>
+  </md-sidenav>
+</md-sidenav-container>
