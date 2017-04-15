@@ -8,22 +8,22 @@ import {MaterialModule} from "./material/material.module";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {MenuComponent} from "./menu.component";
 import {RouterModule} from "@angular/router";
-import {StoresComponent} from "./stores.component";
-import {AnalyticsComponent} from "./analytics.component";
-import {SettingsComponent} from "./settings.component";
-import {AppRoutes} from "./app.routes";
+import {routing} from "./app.routes";
+import {CatsComponent} from "./cats.component";
+import {DogsComponent} from "./dogs.component";
+import {ElephantsComponent} from "./elephants.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    StoresComponent,
-    AnalyticsComponent,
-    SettingsComponent
+    CatsComponent,
+    DogsComponent,
+    ElephantsComponent
   ],
   imports: [
     RouterModule,
-    RouterModule.forRoot(AppRoutes),
+    routing,
     BrowserModule,
     NoopAnimationsModule,
     FormsModule,

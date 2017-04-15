@@ -4,10 +4,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'settings',
-  templateUrl: 'settings.template.html'
+  selector: 'elephants',
+  templateUrl: 'elephants.template.html'
 })
-export class SettingsComponent implements OnInit {
+export class ElephantsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }

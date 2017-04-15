@@ -13,19 +13,16 @@ export class MenuComponent {
   constructor() {
     this.navigationRoutes = [
       {
-        name: 'Stores',
-        icon: 'local_offer',
-        url: './stores'
+        name: 'Cats',
+        url: './cats'
       },
       {
-        name: 'Analytics',
-        icon: 'show_chart',
-        url: './analytics'
+        name: 'Dogs',
+        url: './dogs'
       },
       {
-        name: 'Settings',
-        icon: 'settings',
-        url: './settings'
+        name: 'Elephants',
+        url: './elephants'
       }
     ]
   }

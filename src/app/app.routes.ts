@@ -1,14 +1,17 @@
 /**
  * Created by svet on 4/15/2017.
  */
-import {StoresComponent} from "./stores.component";
-import {AnalyticsComponent} from "./analytics.component";
-import {SettingsComponent} from "./settings.component";
+import {ModuleWithProviders} from "@angular/core";
+import {RouterModule} from "@angular/router";
+import {CatsComponent} from "./cats.component";
+import {DogsComponent} from "./dogs.component";
+import {ElephantsComponent} from "./elephants.component";
 
 
-export const AppRoutes = [
-
-  { path: 'stores', component: StoresComponent},
-  { path: 'analytics', component: AnalyticsComponent},
-  { path: 'settings', component: SettingsComponent}
+var appRoutes = [
+  { path: 'cats', component: CatsComponent},
+  { path: 'dogs', component: DogsComponent},
+  { path: 'elephants', component: ElephantsComponent}
 ];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
