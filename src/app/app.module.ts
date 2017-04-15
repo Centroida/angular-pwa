@@ -11,19 +11,19 @@ import {RouterModule} from "@angular/router";
 import {StoresComponent} from "./stores.component";
 import {AnalyticsComponent} from "./analytics.component";
 import {SettingsComponent} from "./settings.component";
-import {ROUTES} from "./app.routes";
+import {AppRoutes} from "./app.routes";
 
 @NgModule({
   declarations: [
+    AppComponent,
+    MenuComponent,
     StoresComponent,
     AnalyticsComponent,
-    SettingsComponent,
-    AppComponent,
-    MenuComponent
+    SettingsComponent
   ],
   imports: [
     RouterModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(AppRoutes),
     BrowserModule,
     NoopAnimationsModule,
     FormsModule,

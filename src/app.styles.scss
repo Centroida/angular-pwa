@@ -39,3 +39,8 @@ body {
 @keyframes animation {
   to { opacity: 0.2; }
 }
+.navigation {
+  md-list-item{
+    max-width: 100px;
+  }
+}
