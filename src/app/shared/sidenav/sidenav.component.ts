@@ -12,16 +12,16 @@ export class SidenavComponent implements OnInit {
   constructor() {
     this.navigationRoutes = [
       {
-        name: 'Monday',
-        url: './monday'
-      },
-      {
-        name: 'Tuesday',
-        url: './tuesday'
+        name: 'Picture of the day',
+        url: './info'
       }
     ];
   }
 
   ngOnInit() {
+  }
+
+  onSelectDate(date){
+    console.log("date ", date )
   }
 }

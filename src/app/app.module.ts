@@ -10,9 +10,8 @@ import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NoInternetComponent } from './shared/no-internet/no-internet.component';
-import { MondayComponent } from './components/monday/monday/monday.component';
-import { TuesdayComponent } from './components/tuesday/tuesday/tuesday.component';
 import {NasaService} from "./services/nasa.service";
+import {InfoComponent} from "./components/info/info.component";
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyDwRirzSQ6qpDvjrhlACnVr03HG76xXukQ",
@@ -28,8 +27,7 @@ export const firebaseConfig = {
     AppComponent,
     SidenavComponent,
     NoInternetComponent,
-    MondayComponent,
-    TuesdayComponent
+    InfoComponent
   ],
   imports: [
     RouterModule,

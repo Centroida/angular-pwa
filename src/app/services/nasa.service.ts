@@ -7,7 +7,7 @@ export class NasaService {
   constructor(private http: Http) { }
 
   getImageOfTheDay(date:string) {
-    return this.http.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`, this.getRequestHeaders())
+    return this.http.get(`https://api.nasa.gov/planetary/apod?api_key=rTwZovLn60smJqOHYzWlg1vOMBr58dWXHKtAnaIo&date=${date}`, this.getRequestHeaders())
       .map(res => res.json());
   }
 
