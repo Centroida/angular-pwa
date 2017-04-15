@@ -14,16 +14,14 @@
   <meta name="theme-color" content="#999999">
 </head>
 <body>
-  <app-root></app-root>
-  <div class="app-loader">
-    <img class="logo" src="assets/images/loading.svg" alt="Logo">
-
+  <app-root>
+    <div class="loading"></div>
+  </app-root>
     <noscript>
       <h4 style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica;">
         Sorry, JavaScript needs to be enabled in order to run this application.
       </h4>
     </noscript>
-  </div>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
