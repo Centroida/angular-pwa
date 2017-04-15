@@ -12,16 +12,12 @@ export class SidenavComponent implements OnInit {
   constructor() {
     this.navigationRoutes = [
       {
-        name: 'Cats',
-        url: './cats'
+        name: 'Monday',
+        url: './monday'
       },
       {
-        name: 'Dogs',
-        url: './dogs'
-      },
-      {
-        name: 'Elephants',
-        url: './elephants'
+        name: 'Tuesday',
+        url: './tuesday'
       }
     ];
   }

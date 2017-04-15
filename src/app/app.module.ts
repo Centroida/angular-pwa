@@ -5,33 +5,22 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from "./material/material.module";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
-import {AngularFireModule} from "angularfire2";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
-import { CatsComponent } from './components/cats/cats.component';
-import { DogsComponent } from './components/dogs/dogs.component';
-import { ElephantsComponent } from './components/elephants/elephants.component';
-import {ImagesService} from "./services/images.service";
 import { NoInternetComponent } from './shared/no-internet/no-internet.component';
+import { MondayComponent } from './components/monday/monday.component';
+import { TuesdayComponent } from './components/tuesday/tuesday.component';
+import {NasaService} from "./services/nasa.service";
 // Must export the config
-export const firebaseConfig = {
-  apiKey: "AIzaSyDwRirzSQ6qpDvjrhlACnVr03HG76xXukQ",
-  authDomain: "angular2-pwa-8efb6.firebaseapp.com",
-  databaseURL: "https://angular2-pwa-8efb6.firebaseio.com",
-  storageBucket: "angular2-pwa-8efb6.appspot.com",
-  messagingSenderId: "711819828193"
-};
-
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    CatsComponent,
-    DogsComponent,
-    ElephantsComponent,
-    NoInternetComponent
+    NoInternetComponent,
+    MondayComponent,
+    TuesdayComponent
   ],
   imports: [
     RouterModule,
@@ -40,10 +29,9 @@ export const firebaseConfig = {
     NoopAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    MaterialModule
   ],
-  providers: [ImagesService],
+  providers: [NasaService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
