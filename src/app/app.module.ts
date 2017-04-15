@@ -9,6 +9,9 @@ import {AngularFireModule} from "angularfire2";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { CatsComponent } from './components/cats/cats.component';
+import { DogsComponent } from './components/dogs/dogs.component';
+import { ElephantsComponent } from './components/elephants/elephants.component';
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyDwRirzSQ6qpDvjrhlACnVr03HG76xXukQ",
@@ -22,7 +25,10 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    CatsComponent,
+    DogsComponent,
+    ElephantsComponent
   ],
   imports: [
     RouterModule,
