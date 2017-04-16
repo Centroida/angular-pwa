@@ -16,6 +16,7 @@ export class NasaService {
 
   public getRequestHeaders() {
     const headers: Headers = new Headers();
+    headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     return new RequestOptions({headers: headers});
   }

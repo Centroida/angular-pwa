@@ -11,7 +11,6 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NoInternetComponent } from './shared/no-internet/no-internet.component';
 import {NasaService} from "./services/nasa.service";
 import {InfoComponent} from "./components/info/info.component";
-// Must export the config
 
 @NgModule({
   declarations: [

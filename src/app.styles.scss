@@ -64,7 +64,7 @@ $mat-toolbar-height-mobile-landscape: 48px !default;
     height: calc(100vh - #{$mat-toolbar-height-mobile-landscape});
   }
 }
-md-sidenav {
+md-sidenav.sidenav-panel {
   overflow-x: hidden;
   width: 15rem;
   background-color: #f5f5f5 !important;

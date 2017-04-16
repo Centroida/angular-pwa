@@ -1,0 +1,16 @@
+md-card {
+  .picture-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 400px;
+    }
+  }
+}
+
+.no-connection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -6,17 +6,13 @@ import {NasaService} from "../../services/nasa.service";
   templateUrl: 'info.component.html',
   styleUrls: ['info.component.scss']
 })
-export class InfoComponent implements OnInit {
+export class InfoComponent {
 
   public pic: string;
   public info: string;
   public selectedDate: string;
   public hasError: boolean;
   constructor(private _nasaService: NasaService) {
-  }
-
-  ngOnInit() {
-
   }
 
   onSelectDate(date) {
@@ -29,7 +25,11 @@ export class InfoComponent implements OnInit {
           this.info = res.explanation;
         }
       },
-      (err) => this.hasError = true);
+      (err) => {
+        this.hasError = true;
+        this.pic = '';
+        this.info = '';
+      });
     }
 
 }

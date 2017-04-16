@@ -8,5 +8,9 @@ module.exports = {
   ],
   root: 'dist',
   stripPrefix: 'dist/',
-  navigateFallback: '/index.html'
+  navigateFallback: '/index.html',
+  runtimeCaching: [{
+    urlPattern: /api\.nasa\.gov/,
+    handler: 'networkFirst'
+  }]
 };
