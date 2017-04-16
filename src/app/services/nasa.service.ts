@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {RequestOptions, Headers, Http} from "@angular/http";
-import {Observable} from "rxjs";
+import {Observable} from "rxjs/Rx";
 
 @Injectable()
 export class NasaService {

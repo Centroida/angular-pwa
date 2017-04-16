@@ -3,13 +3,10 @@
  */
 import {ModuleWithProviders} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {MondayComponent} from "./components/monday/monday.component";
-import {TuesdayComponent} from "./components/tuesday/tuesday.component";
-
+import { InfoComponent} from "./components/info/info.component";
 
 const appRoutes: Routes = [
-  { path: 'monday', component: MondayComponent},
-  { path: 'tuesday', component: TuesdayComponent}
+  { path: 'info', component: InfoComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

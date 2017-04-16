@@ -13,6 +13,7 @@ import {
 
 } from "@angular/material";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {Md2Module} from "md2";
 
 @NgModule({
   imports: [
@@ -26,9 +27,11 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdToolbarModule,
     MdGridListModule,
     FlexLayoutModule,
-    MdSidenavModule
+    MdSidenavModule,
+    Md2Module,
   ],
   exports: [
+    Md2Module,
     MdListModule,
     MdButtonModule,
     MdIconModule,
