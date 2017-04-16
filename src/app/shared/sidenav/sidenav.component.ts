@@ -6,7 +6,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./sidenav.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent {
   public navigationRoutes: Array<Object>;
 
   constructor() {
@@ -18,10 +18,4 @@ export class SidenavComponent implements OnInit {
     ];
   }
 
-  ngOnInit() {
-  }
-
-  onSelectDate(date){
-    console.log("date ", date )
-  }
 }
