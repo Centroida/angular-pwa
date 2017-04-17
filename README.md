@@ -31,27 +31,19 @@
 
   Angular 2 PWA provides a Web App Manifest that allows you to add to your homescreen.
   
-  ## Tech Stack
-
-## Contributors
-
-A million thanks to some awesome people :)
-
-* [Taulant Disha]()
-* [Svet]()
-* [Hristo Georgiev]()
+## Tech Stack
 
 
-**NAME:**    | NodeJS | TypeScript | Angular CLI | Angular | Angular Material
------------- | ------ | ---------- | ----------- | ------- | ----------------
-**VERSION:** | `7.8`  | `2.2`      | `1.x`       | `4.0`   | `2.0.0-beta2`
+  **NAME:**    | NodeJS | TypeScript | Angular CLI | Angular | Angular Material
+  ------------ | ------ | ---------- | ----------- | ------- | ----------------
+  **VERSION:** | `7.8`  | `2.2`      | `1.x`       | `4.0`   | `2.0.0-beta2`
 
 ## Initial Setup
 
-1. Download and install the appropriate version (_see above_) of [NodeJS](https://nodejs.org/) from:
+ 1. Download and install the appropriate version (_see above_) of [NodeJS](https://nodejs.org/) from:
     https://nodejs.org/en/download/releases/
 
-1. Install [TypeScript](https://www.typescriptlang.org/),
+ 1. Install [TypeScript](https://www.typescriptlang.org/),
     [Typings](https://github.com/typings/typings) and 
     [Angular CLI](https://cli.angular.io/):
     ```bash
