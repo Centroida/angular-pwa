@@ -28,12 +28,14 @@ export class InfoComponent {
     this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => {
         this.picOfTheDay = res;
+        this.dateOverRange = "";
         this.loading = false;
       },
       (err) => {
         if (err.json().code === 400) {
           this.dateOverRange = err.json().msg;
         } else {
+          this.dateOverRange = "";
           this.hasError = true;
         }
         this.loading = false;

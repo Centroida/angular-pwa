@@ -1,5 +1,5 @@
 
-<div *ngIf="!hasError && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <material-datepicker
     dateFormat="YYYY-MM-DD"
     placeholder="YYYY-MM-DD"
@@ -11,7 +11,7 @@
   <p>{{dateOverRange}}</p>
 </div>
 
-<div class="wrapper" *ngIf="hasError && !loading" class="no-connection">
+<div class="wrapper" *ngIf="hasError && !loading && dateOverRange === ''" class="no-connection">
   <md-card>
     <div class="picture-wrapper">
       <img src="../../../assets/images/no-photo.png">
@@ -21,7 +21,7 @@
     </md-card-content>
   </md-card>
 </div>
-<div class="wrapper" *ngIf="picOfTheDay" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+<div class="wrapper" *ngIf="picOfTheDay && dateOverRange === ''" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <div *ngIf="!hasError && !loading" fxFlex.gt-sm="50" fxFlex.gt-md="50" fxFlex="100">
     <md-card>
       <div class="picture-wrapper">
