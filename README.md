@@ -9,10 +9,10 @@
   <a href="https://material.angular.io" >Angular material </a>
 </p>
 
----
+
 **Fast:** Service Worker App Shell + Dynamic Content model to achieve faster load times with and without a network.
---
-**Responsive:** Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home screen to have a native feel.
---
+
+**Responsive:** Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home   screen to have a native feel.
+
 **Progressive:** [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
 
