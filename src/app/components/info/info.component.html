@@ -1,8 +1,5 @@
 <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
-  <md2-datepicker
-    (change)="onSelectDate($event)"
-    [isOpen]="true">
-  </md2-datepicker>
+  <material-datepicker [(date)]="ddate" dateFormat="YYYY-MM-DD" (onSelect)="onSelectDate($event)"></material-datepicker>
 </div>
 <div class="no-connection">
 </div>

@@ -12,11 +12,12 @@ export class InfoComponent {
   public info: string;
   public errorMessage: string = null;
   public hasInternet: boolean = true;
+  public ddate:any;
   constructor(private _nasaService: NasaService) {
   }
 
   public onSelectDate(date: any) {
-    const selectedDate = new Date(date.value);
+    const selectedDate = new Date(date);
     const year = selectedDate.getFullYear();
     const month = selectedDate.getMonth() + 1;
     const day = selectedDate.getDate();
