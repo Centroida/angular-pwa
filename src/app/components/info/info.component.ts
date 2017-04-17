@@ -10,7 +10,7 @@ export class InfoComponent {
 
   public pic: string;
   public info: string;
-  public hasError: boolean;
+  public errorMessage: string = null;
   constructor(private _nasaService: NasaService) {
   }
 
@@ -24,15 +24,18 @@ export class InfoComponent {
     this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => {
         if (res) {
-          this.hasError = false;
+          this.errorMessage = null;
           this.pic = res.url;
           this.info = res.explanation;
         }
       },
       (err) => {
-        this.hasError = true;
-        this.pic = '';
-        this.info = '';
+        if(err.json().msg){
+          this.errorMessage = err.json().msg;
+        }else{
+          this.pic = '';
+          this.info = '';
+        }
       });
       }
 
