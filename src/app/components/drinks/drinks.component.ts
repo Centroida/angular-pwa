@@ -7,12 +7,14 @@ import {DrinksService} from "../../services/drinks.service";
   styleUrls: ['./drinks.component.scss']
 })
 export class DrinksComponent implements OnInit {
-  public beers: any;
-  constructor(private _drinksService: DrinksService) { }
+  public beers: Array<any>;
+  public hasError: any;
+  public constructor(private _drinksService: DrinksService) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this._drinksService.getBeers().subscribe(
-      (res) => this.beers = res);
+      (res) => this.beers = res,
+      (err) => this.hasError = true
+    );
   }
-
 }

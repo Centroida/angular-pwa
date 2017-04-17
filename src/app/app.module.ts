@@ -13,6 +13,7 @@ import {NasaService} from "./services/nasa.service";
 import {InfoComponent} from "./components/info/info.component";
 import {DrinksService} from "./services/drinks.service";
 import { DrinksComponent } from './components/drinks/drinks.component';
+import {TuesdayComponent} from "./components/tuesday/tuesday.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DrinksComponent } from './components/drinks/drinks.component';
     SidenavComponent,
     NoInternetComponent,
     InfoComponent,
-    DrinksComponent
+    DrinksComponent,
+    TuesdayComponent
   ],
   imports: [
     RouterModule,

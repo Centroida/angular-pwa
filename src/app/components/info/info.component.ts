@@ -7,16 +7,20 @@ import {NasaService} from "../../services/nasa.service";
   styleUrls: ['info.component.scss']
 })
 export class InfoComponent {
-  public selectedDate: string;
   public pictureOfTheDay: any;
   public hasError: boolean;
 
-  constructor(private _nasaService: NasaService) {
+  public constructor(private _nasaService: NasaService) {
   }
 
-  onSelectDate(date) {
-    const newDate = new Date(date.value).toISOString().substr(0, 10);
-    this._nasaService.getImageOfTheDay(newDate).subscribe(
+  public onSelectDate(date: any) {
+    const selectedDate = new Date(date.value);
+    const year = selectedDate.getFullYear();
+    const month = selectedDate.getMonth() + 1;
+    const day = selectedDate.getDate();
+    const formattedDate = year + '-' + month + '-' + day;
+
+    this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => this.pictureOfTheDay = res,
       (err) => this.hasError = true,
       () => {
