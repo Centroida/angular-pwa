@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://angular2-pwa-8efb6.firebaseapp.com">
-    <img alt="Angular 2 PWA" title="Angular 2 PWA" src="https://udemy-images.udemy.com/course/750x422/769390_7c69_3.jpg" width="150">
+    <img alt="Angular 2 PWA" title="Angular 2 PWA" src="https://udemy-images.udemy.com/course/750x422/769390_7c69_3.jpg" width="220">
   </a>
 </p>
 <p align="center">
