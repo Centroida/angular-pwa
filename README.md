@@ -37,9 +37,9 @@
 
 A million thanks to some awesome people :)
 
-* [Taulant Disha]
-* [Svet]
-* [Hristo Georgiev]
+* [Taulant Disha]()
+* [Svet]()
+* [Hristo Georgiev]()
 
 
 **NAME:**    | NodeJS | TypeScript | Angular CLI | Angular | Angular Material
