@@ -39,7 +39,20 @@ body {
 @keyframes animation {
   to { opacity: 0.2; }
 }
+/*
+ Spinner styles
+ */
+.center-spinner {
+  margin: 0 auto;
+  &.center-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
 
+}
 /* $main-panel
  ------------------------------------------*/
 $mat-toolbar-height-desktop: 64px !default;
@@ -76,4 +89,23 @@ md-sidenav.sidenav-panel {
   > nav {
     min-width: 15rem;
   }
+}
+md-card {
+  .picture-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .beers-image {
+      height: 200px;
+      width: auto;
+    }
+    .nasa-image{
+      height: 400px;
+      width: auto;
+    }
+  }
+}
+.no-connection {
+  margin-top: 120px;
+  text-align: center;
 }

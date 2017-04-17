@@ -20,8 +20,8 @@ export class SidenavComponent {
         url: './tuesday'
       },
       {
-        name: 'Drinks',
-        url: './drinks',
+        name: 'Beers',
+        url: './beers',
       }
     ];
   }

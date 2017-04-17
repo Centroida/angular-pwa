@@ -5,13 +5,12 @@
   </md2-datepicker>
 </div>
 <div class="no-connection">
-  <app-no-internet *ngIf="!hasInternet"></app-no-internet>
 </div>
 <div *ngIf="(pic || info) && !errorMessage" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <div fxFlex.gt-sm="50" fxFlex.gt-md="50" fxFlex="100">
     <md-card>
       <div class="picture-wrapper">
-        <img md-card-image src="{{pic}}">
+        <img class="nasa-image" md-card-image src="{{pic}}">
       </div>
       <md-card-content>
         <p>
