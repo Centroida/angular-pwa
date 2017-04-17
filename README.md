@@ -20,3 +20,9 @@
 ## Progressive 
    [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
 
+## Offline Support
+
+  Using Service Worker to load quickly and work offline.
+
+* [`sw-precache`](https://github.com/GoogleChrome/sw-precache) is used to serve local static resources (App Shell) cache first.
+* [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) is used to handle requests using the `networkFirst` strategy. If a request     fails, the app will fulfill the request from the cache. This means previously loaded pages will now work offline.
