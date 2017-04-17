@@ -31,6 +31,13 @@
 
   Angular 2 PWA provides a Web App Manifest that allows you to add to your homescreen.
   
+## Contributors
+
+ * [Taulant Disha]()
+ * [Svet]()
+ * [Hristo Georgiev]()
+ 
+--- 
 ## Tech Stack
 
 
