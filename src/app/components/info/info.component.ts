@@ -11,6 +11,7 @@ export class InfoComponent {
   public pic: string;
   public info: string;
   public errorMessage: string = null;
+  public hasInternet: boolean = true;
   constructor(private _nasaService: NasaService) {
   }
 
@@ -33,9 +34,10 @@ export class InfoComponent {
         if(err.json().msg){
           this.errorMessage = err.json().msg;
         }else{
-          this.pic = '';
-          this.info = '';
+          this.hasInternet = false;
         }
+        this.pic = '';
+        this.info = '';
     });
   }
 }
