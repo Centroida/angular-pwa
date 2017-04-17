@@ -1,8 +1,24 @@
-<md2-datepicker (change)="onSelectDate($event)">
-
-</md2-datepicker>
-
-<p>
-  <img width="300px" height="300px" src="../../../assets/images/cat.jpg"/>
-  {{info}}
-</p>
+<div class="no-connection">
+  <app-no-internet *ngIf="(!pic || !info) && hasError"></app-no-internet>
+</div>
+<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+  <md2-datepicker *ngIf="!hasError"
+    (change)="onSelectDate($event)"
+    [openOnFocus]="true"
+    [isOpen]="true">
+  </md2-datepicker>
+</div>
+<div *ngIf="(pic || info) && !hasError" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+  <div fxFlex.gt-sm="50" fxFlex.gt-md="50" fxFlex="100">
+    <md-card>
+      <div class="picture-wrapper">
+        <img md-card-image src="{{pic}}">
+      </div>
+      <md-card-content>
+        <p>
+          {{info}}
+        </p>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

@@ -5,23 +5,13 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from "./material/material.module";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
-import {AngularFireModule} from "angularfire2";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NoInternetComponent } from './shared/no-internet/no-internet.component';
 import {NasaService} from "./services/nasa.service";
 import {InfoComponent} from "./components/info/info.component";
-import { TuesdayComponent } from './components/tuesday/tuesday.component';
-// Must export the config
-export const firebaseConfig = {
-  apiKey: "AIzaSyDwRirzSQ6qpDvjrhlACnVr03HG76xXukQ",
-  authDomain: "angular2-pwa-8efb6.firebaseapp.com",
-  databaseURL: "https://angular2-pwa-8efb6.firebaseio.com",
-  storageBucket: "angular2-pwa-8efb6.appspot.com",
-  messagingSenderId: "711819828193"
-};
-
+import {TuesdayComponent} from "./components/tuesday/tuesday.component";
 
 @NgModule({
   declarations: [
@@ -38,8 +28,7 @@ export const firebaseConfig = {
     NoopAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    MaterialModule
   ],
   providers: [NasaService],
   bootstrap: [AppComponent]

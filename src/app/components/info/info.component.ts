@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {NasaService} from "../../services/nasa.service";
 
 @Component({
@@ -6,27 +6,30 @@ import {NasaService} from "../../services/nasa.service";
   templateUrl: 'info.component.html',
   styleUrls: ['info.component.scss']
 })
-export class InfoComponent implements OnInit {
+export class InfoComponent {
 
-  public pic:string;
-  public info:string;
-  public selectedDate:string;
-
-  constructor(private _nasaService: NasaService) { }
-
-  ngOnInit() {
-
+  public pic: string;
+  public info: string;
+  public selectedDate: string;
+  public hasError: boolean;
+  constructor(private _nasaService: NasaService) {
   }
 
-  onSelectDate(date){
-    let newDate = new Date(date.value);
+  onSelectDate(date) {
+    const newDate = new Date(date.value);
     this.selectedDate = newDate.getFullYear() + '-' + newDate.getDay() + '-' + newDate.getMonth();
-    this._nasaService.getImageOfTheDay(this.selectedDate).subscribe((res)=>{
-      if(res){
-        this.pic = res.url;
-        this.info = res.explanation;
-      }
-    })
-  }
+    this._nasaService.getImageOfTheDay(this.selectedDate).subscribe(
+      (res) => {
+        if (res) {
+          this.pic = res.url;
+          this.info = res.explanation;
+        }
+      },
+      (err) => {
+        this.hasError = true;
+        this.pic = '';
+        this.info = '';
+      });
+    }
 
 }
