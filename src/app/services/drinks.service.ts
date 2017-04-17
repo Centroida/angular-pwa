@@ -10,7 +10,7 @@ export class DrinksService {
 
   getBeers(): Observable<any> {
     return this.http
-      .get(`https://api.punkapi.com/v2/beers?page=1&per_page=20`,
+      .get(`https://api.punkapi.com/v2/beers?page=1&per_page=12`,
         this.getRequestHeaders())
       .map(res => res.json())
       .catch(err => Observable.throw(err));

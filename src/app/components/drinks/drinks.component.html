@@ -1,6 +1,5 @@
-<div *ngIf="!beers && hasError" class="no-connection">
+<div class="wrapper" *ngIf="!beers && hasError" class="no-connection">
   <md-card>
-    <md-card-header><h1>NO BEERS FOR YOU</h1></md-card-header>
     <div class="picture-wrapper">
       <img src="../../../assets/images/no-beer.png">
     </div>
@@ -10,7 +9,7 @@
   </md-card>
 </div>
 
-<div *ngIf="beers && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+<div class="wrapper" *ngIf="beers && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <div fxFlex.gt-sm="33" fxFlex.gt-md="25" fxFlex="100" *ngFor="let beer of beers">
     <md-card>
       <div class="picture-wrapper">

@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import { DatepickerModule } from 'angular2-material-datepicker'
+import { DatepickerModule } from "angular2-material-datepicker";
 import {
   MdButtonModule,
   MdCardModule,

@@ -100,7 +100,7 @@ md-card {
       width: auto;
     }
     .nasa-image{
-      height: 400px;
+      height: 250px;
       width: auto;
     }
   }
@@ -108,4 +108,19 @@ md-card {
 .no-connection {
   margin-top: 120px;
   text-align: center;
+  .picture-wrapper img{
+    height: 200px;
+    width: auto;
+  }
+}
+md-card {
+  padding: 0;
+  margin: .33333rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  color: rgba(0,0,0,.87);
+  background: #fff;
+}
+.wrapper{
+  background: white!important;
 }

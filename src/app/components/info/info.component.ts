@@ -8,15 +8,17 @@ import {NasaService} from "../../services/nasa.service";
 })
 export class InfoComponent {
 
-  public pic: string;
-  public info: string;
-  public errorMessage: string = null;
-  public hasInternet: boolean = true;
-  public ddate:any;
+  public hasError: any;
+  public loading: boolean;
+  public picOfTheDay: any;
+  public dateOverRange: string;
+
   constructor(private _nasaService: NasaService) {
+    this.dateOverRange = "";
   }
 
   public onSelectDate(date: any) {
+    this.loading = true;
     const selectedDate = new Date(date);
     const year = selectedDate.getFullYear();
     const month = selectedDate.getMonth() + 1;
@@ -25,21 +27,16 @@ export class InfoComponent {
 
     this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => {
-        if (res) {
-          this.hasInternet = true;
-          this.errorMessage = null;
-          this.pic = res.url;
-          this.info = res.explanation;
-        }
+        this.picOfTheDay = res;
+        this.loading = false;
       },
       (err) => {
-        if(err.json().msg){
-          this.errorMessage = err.json().msg;
-        }else{
-          this.hasInternet = false;
+        if (err.json().code === 400) {
+          this.dateOverRange = err.json().msg;
+        } else {
+          this.hasError = true;
         }
-        this.pic = '';
-        this.info = '';
-    });
+        this.loading = false;
+      });
   }
 }
