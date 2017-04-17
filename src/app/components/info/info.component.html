@@ -1,22 +1,21 @@
 <div class="no-connection">
-  <app-no-internet *ngIf="(!pic || !info) && hasError"></app-no-internet>
+  <app-no-internet *ngIf="!pictureOfTheDay && hasError"></app-no-internet>
 </div>
 <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
-  <md2-datepicker *ngIf="!hasError"
+  <md2-datepicker
     (change)="onSelectDate($event)"
-    [openOnFocus]="true"
     [isOpen]="true">
   </md2-datepicker>
 </div>
-<div *ngIf="(pic || info) && !hasError" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+<div *ngIf="pictureOfTheDay" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <div fxFlex.gt-sm="50" fxFlex.gt-md="50" fxFlex="100">
     <md-card>
       <div class="picture-wrapper">
-        <img md-card-image src="{{pic}}">
+        <img md-card-image src="{{pictureOfTheDay['url']}}">
       </div>
       <md-card-content>
         <p>
-          {{info}}
+          {{pictureOfTheDay['explanation']}}
         </p>
       </md-card-content>
     </md-card>

@@ -14,6 +14,10 @@ export class SidenavComponent {
       {
         name: 'Picture of the day',
         url: './info'
+      },
+      {
+        name: 'Drinks',
+        url: './drinks'
       }
     ];
   }
