@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -18,6 +18,10 @@ export class SidenavComponent {
       {
         name: 'Tuesday',
         url: './tuesday'
+      },
+      {
+        name: 'Drinks',
+        url: './drinks',
       }
     ];
   }

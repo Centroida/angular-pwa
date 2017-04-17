@@ -14,12 +14,12 @@ export class InfoComponent {
   constructor(private _nasaService: NasaService) {
   }
 
-  onSelectDate(date:any) {
-    let selectedDate = new Date(date.value);
-    let year = selectedDate.getFullYear();
-    let month = selectedDate.getMonth() + 1;
-    let day = selectedDate.getDate();
-    let formattedDate = year + '-' + month + '-' + day;
+  public onSelectDate(date: any) {
+    const selectedDate = new Date(date.value);
+    const year = selectedDate.getFullYear();
+    const month = selectedDate.getMonth() + 1;
+    const day = selectedDate.getDate();
+    const formattedDate = year + '-' + month + '-' + day;
 
     this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => {
@@ -36,7 +36,6 @@ export class InfoComponent {
           this.pic = '';
           this.info = '';
         }
-      });
-      }
-
+    });
+  }
 }

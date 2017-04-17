@@ -9,8 +9,14 @@ module.exports = {
   root: 'dist',
   stripPrefix: 'dist/',
   navigateFallback: '/index.html',
-  runtimeCaching: [{
-    urlPattern: /api\.nasa\.gov/,
-    handler: 'networkFirst'
-  }]
+  runtimeCaching: [
+    {
+      urlPattern: /api\.nasa\.gov/,
+      handler: 'networkFirst'
+    },
+    {
+      urlPattern: /api\.punkapi\.com/,
+      handler: 'networkFirst'
+    }
+  ]
 };

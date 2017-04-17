@@ -11,6 +11,8 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NoInternetComponent } from './shared/no-internet/no-internet.component';
 import {NasaService} from "./services/nasa.service";
 import {InfoComponent} from "./components/info/info.component";
+import {DrinksService} from "./services/drinks.service";
+import { DrinksComponent } from './components/drinks/drinks.component';
 import {TuesdayComponent} from "./components/tuesday/tuesday.component";
 
 @NgModule({
@@ -19,6 +21,7 @@ import {TuesdayComponent} from "./components/tuesday/tuesday.component";
     SidenavComponent,
     NoInternetComponent,
     InfoComponent,
+    DrinksComponent,
     TuesdayComponent
   ],
   imports: [
@@ -30,7 +33,7 @@ import {TuesdayComponent} from "./components/tuesday/tuesday.component";
     HttpModule,
     MaterialModule
   ],
-  providers: [NasaService],
+  providers: [NasaService , DrinksService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
