@@ -13,11 +13,7 @@ export class SidenavComponent {
     this.navigationRoutes = [
       {
         name: 'Picture of the day',
-        url: './info'
-      },
-      {
-        name: 'Tuesday',
-        url: './tuesday'
+        url: './pictureOfTheDay'
       },
       {
         name: 'Beers',

@@ -5,7 +5,8 @@ import {DrinksComponent} from "./components/drinks/drinks.component";
 
 const appRoutes: Routes = [
   {path: 'info', component: InfoComponent},
-  {path: 'beers', component: DrinksComponent}
+  {path: 'beers', component: DrinksComponent},
+  {path: 'pictureOfTheDay', component: InfoComponent}
 ];
 
 
