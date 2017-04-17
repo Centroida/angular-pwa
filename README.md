@@ -1,4 +1,8 @@
-# Pwa
+<p align="center">
+  <a href="https://angular2-pwa-8efb6.firebaseapp.com">
+    <img alt="Angular 2 HN" title="Angular 2 HN" src="https://udemy-images.udemy.com/course/750x422/769390_7c69_3.jpg" width="150">
+  </a>
+</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
