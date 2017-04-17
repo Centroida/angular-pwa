@@ -1,18 +1,12 @@
 <p align="center">
   <a href="https://angular2-pwa-8efb6.firebaseapp.com">
-    <img alt="Angular 2 HN" title="Angular 2 HN" src="https://udemy-images.udemy.com/course/750x422/769390_7c69_3.jpg" width="150">
+    <img alt="Angular 2 PWA" title="Angular 2 PWA" src="https://udemy-images.udemy.com/course/750x422/769390_7c69_3.jpg" width="150">
   </a>
 </p>
+<p align="center">
+  This applications is built with <a href="https://cli.angular.io">Angular 4 </a> and  <a href="https://material.angular.io">Angular material </a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
 ## Build
 
