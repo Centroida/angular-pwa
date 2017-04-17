@@ -25,6 +25,7 @@ export class InfoComponent {
     this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => {
         if (res) {
+          this.hasInternet = true;
           this.errorMessage = null;
           this.pic = res.url;
           this.info = res.explanation;

@@ -1,6 +1,3 @@
-<div class="no-connection">
-  <app-no-internet *ngIf="!pictureOfTheDay && hasError"></app-no-internet>
-</div>
 <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <md2-datepicker
     (change)="onSelectDate($event)"
