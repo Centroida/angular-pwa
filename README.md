@@ -4,7 +4,7 @@
   </a>
 </p>
 <p align="center">
-  This applications is built with <a href="https://cli.angular.io">Angular 4 </a> and  <a href="https://material.angular.io">Angular material </a>
+  This applications is built with <a href="https://cli.angular.io" target="_blank">Angular 4 </a> and  <a href="https://material.angular.io" target="_blank">Angular material </a>
 </p>
 
 
