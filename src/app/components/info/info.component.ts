@@ -10,17 +10,21 @@ export class InfoComponent {
 
   public pic: string;
   public info: string;
-  public selectedDate: string;
   public hasError: boolean;
   constructor(private _nasaService: NasaService) {
   }
 
-  onSelectDate(date) {
-    const newDate = new Date(date.value);
-    this.selectedDate = newDate.getFullYear() + '-' + newDate.getDay() + '-' + newDate.getMonth();
-    this._nasaService.getImageOfTheDay(this.selectedDate).subscribe(
+  onSelectDate(date:any) {
+    let selectedDate = new Date(date.value);
+    let year = selectedDate.getFullYear();
+    let month = selectedDate.getMonth() + 1;
+    let day = selectedDate.getDate();
+    let formattedDate = year + '-' + month + '-' + day;
+
+    this._nasaService.getImageOfTheDay(formattedDate).subscribe(
       (res) => {
         if (res) {
+          this.hasError = false;
           this.pic = res.url;
           this.info = res.explanation;
         }
@@ -30,6 +34,6 @@ export class InfoComponent {
         this.pic = '';
         this.info = '';
       });
-    }
+      }
 
 }
