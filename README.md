@@ -9,6 +9,7 @@
   <a href="https://material.angular.io" >Angular material </a>
 </p>
 
+----
 
 **Fast:** Service Worker App Shell + Dynamic Content model to achieve faster load times with and without a network.
 
