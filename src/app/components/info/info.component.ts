@@ -30,6 +30,7 @@ export class InfoComponent {
         this.picOfTheDay = res;
         this.dateOverRange = "";
         this.loading = false;
+        this.hasError = false;
       },
       (err) => {
         if (err.json().code === 400) {
