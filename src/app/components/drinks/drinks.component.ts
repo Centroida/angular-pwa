@@ -20,6 +20,7 @@ export class DrinksComponent implements OnInit {
       (res) => {
         this.beers = res;
         this.loading = false;
+        this.hasError = false;
       },
       () => {
         this.hasError = true;

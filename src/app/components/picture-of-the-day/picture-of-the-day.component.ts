@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import {NasaService} from "../../services/nasa.service";
 
 @Component({
-  selector: 'app-monday',
-  templateUrl: 'info.component.html',
-  styleUrls: ['info.component.scss']
+  selector: 'app-picture-of-the-day',
+  templateUrl: './picture-of-the-day.component.html',
+  styleUrls: ['./picture-of-the-day.component.scss']
 })
-export class InfoComponent {
+export class PictureOfTheDayComponent {
 
   public hasError: any;
   public loading: boolean;
@@ -42,4 +42,5 @@ export class InfoComponent {
         this.loading = false;
       });
   }
+
 }

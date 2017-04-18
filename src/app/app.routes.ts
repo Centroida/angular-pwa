@@ -1,12 +1,14 @@
 import {ModuleWithProviders} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {InfoComponent} from "./components/info/info.component";
 import {DrinksComponent} from "./components/drinks/drinks.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {PictureOfTheDayComponent} from "./components/picture-of-the-day/picture-of-the-day.component";
 
 const appRoutes: Routes = [
-  {path: 'info', component: InfoComponent},
+  {path: '', redirectTo: 'pictureOfTheDay', pathMatch: 'full'},
   {path: 'beers', component: DrinksComponent},
-  {path: 'pictureOfTheDay', component: InfoComponent}
+  {path: 'pictureOfTheDay', component: PictureOfTheDayComponent},
+  {path: "**", component: NotFoundComponent,  }
 ];
 
 
