@@ -11,25 +11,20 @@
 
 ----
 
-## Fast
-   Service Worker to achieve faster load with and without a network.
+## What's included
+ - Service Worker to achieve faster load speeds with and without network connection.
+ - Caching server-side data using a service worker.
+ -  Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home screen to    have a native feel.
+ - [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
+ -  Web App Manifest that allows you to add to your homescreen.
 
-## Responsive
-   Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home   screen to    have a native feel.
 
-## Progressive 
-   [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
+### [Demo](https://angular2-pwa-8efb6.firebaseapp.com/)
 
-## Offline Support
-
-  Using Service Worker to load quickly and work offline.
+## Service worker packages
 
 * [`sw-precache`](https://github.com/GoogleChrome/sw-precache) is used to serve local static resources cache first.
 * [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox) is used to handle requests using the `networkFirst` strategy. If a request     fails, the app will fulfill the request from the cache. This means previously loaded pages will now work offline.
-
-## Manifest
-
-  Angular 2 PWA provides a Web App Manifest that allows you to add to your homescreen.
   
 ## Contributors
 
