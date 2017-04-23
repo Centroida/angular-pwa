@@ -12,7 +12,7 @@
 ----
 
 ## What's included
- - Service Worker to achieve faster load speeds with and without network connection.
+ - Faster load speeds and offline support using a service worker.
  - Caching server-side data using a service worker.
  -  Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home screen to    have a native feel.
  - [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
