@@ -14,9 +14,9 @@
 ## What's included
  - Faster load speeds and offline support using a service worker.
  - Caching server-side data using a service worker.
- -  Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home screen to    have a native feel.
+ -  Responsive UI using  <a href="https://github.com/angular/flex-layout">Flex-Layout</a> that can be used to your mobile home screen to have a native feel.
+ -  Web App Manifest that allows you to add to your phone's home screen.
  - [Lighthouse](https://github.com/GoogleChrome/lighthouse) score of 100/100.
- -  Web App Manifest that allows you to add to your homescreen.
 
 
 ### [Demo](https://angular2-pwa-8efb6.firebaseapp.com/)
