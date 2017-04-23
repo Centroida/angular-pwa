@@ -33,8 +33,6 @@
  * [Hristo Georgiev]()
  
 --- 
-## Tech Stack
-
 
   **NAME:**    | NodeJS | TypeScript | Angular CLI | Angular | Angular Material
   ------------ | ------ | ---------- | ----------- | ------- | ----------------
