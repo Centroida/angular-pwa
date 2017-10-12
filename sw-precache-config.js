@@ -15,7 +15,7 @@ module.exports = {
       handler: 'networkFirst'
     },
     {
-      urlPattern: /api\.punkapi\.com/,
+      urlPattern: /api\.milenabooks\.azurewebsites\.net/,
       handler: 'networkFirst'
     }
   ]

@@ -82,6 +82,10 @@
         "variable-declaration": "nospace"
       }
     ],
+    "file-header": [
+      true,
+      "Copyright \\(c\\) \\d{4} Centroida"
+    ],
     "typeof-compare": true,
     "unified-signatures": true,
     "variable-name": false,

@@ -1,14 +1,18 @@
-import { PwaPage } from './app.po';
+/**
+ * Copyright (c) 2017 Centroida.Ai All rights reserved.
+ */
+
+import {PwaPage} from './app.po';
 
 describe('pwa App', () => {
-  let page: PwaPage;
+    let page: PwaPage;
 
-  beforeEach(() => {
-    page = new PwaPage();
-  });
+    beforeEach(() => {
+        page = new PwaPage();
+    });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
+    it('should display message saying app works', () => {
+        page.navigateTo();
+        expect(page.getParagraphText()).toEqual('app works!');
+    });
 });

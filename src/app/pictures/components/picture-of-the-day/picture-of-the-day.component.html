@@ -1,0 +1,49 @@
+<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <div fxFlex="50">
+        <mat-form-field fxFlex="100">
+            <input
+                matInput
+                [max]="maxDate"
+                [matDatepicker]="DateOfStatusPicker"
+                placeholder="Date of status"
+                (dateChange)="onSelectDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="DateOfStatusPicker"></mat-datepicker-toggle>
+        </mat-form-field>
+        <mat-datepicker touchUi="true" #DateOfStatusPicker></mat-datepicker>
+    </div>
+</div>
+
+<div *ngIf="dateOverRange !== ''" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <p>{{dateOverRange}}</p>
+</div>
+
+<div class="wrapper" *ngIf="hasError && !loading && dateOverRange === ''" class="no-connection">
+    <mat-card>
+        <div class="picture-wrapper">
+            <img src="../../../assets/images/no-photo.png">
+        </div>
+        <mat-card-content>
+            <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can
+                work offline.</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="wrapper" *ngIf="picOfTheDay && dateOverRange === ''" fxLayout="row" fxLayoutWrap="wrap"
+     fxLayoutAlign="center center">
+    <div *ngIf="!hasError && !loading" fxFlex.gt-sm="50" fxFlex.gt-mat="50" fxFlex="100">
+        <mat-card>
+            <div class="picture-wrapper">
+                <img class="nasa-image" mat-card-image src="{{picOfTheDay['url']}}">
+            </div>
+            <mat-card-content>
+                <p>
+                    {{picOfTheDay['explanation']}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<mat-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></mat-progress-spinner>
+

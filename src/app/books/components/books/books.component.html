@@ -1,0 +1,32 @@
+<div class="wrapper" *ngIf="!books && hasError" class="no-connection">
+    <mat-card>
+        <div class="picture-wrapper">
+            <img class="beers-image" mat-card-image src="../../../assets/images/no-beer.png">
+        </div>
+        <mat-card-content>
+            <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can
+                work offline.</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="wrapper" *ngIf="books?.length && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <div fxFlex.gt-sm="33" fxFlex.gt-md="25" fxFlex="100" *ngFor="let book of books">
+        <mat-card>
+            <mat-card-header class="book-header" fxLayout="column" fxLayoutAlign="center center">
+                <mat-card-title matTooltip="{{book.Name}}" class="book-title">{{book.Name}}</mat-card-title>
+                <mat-card-subtitle matTooltip="{{book.Author}}" class="book-subtitle">{{book.Author}}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="picture-wrapper">
+                <img class="beers-image" mat-card-image src="{{book.PictureURL}}">
+            </div>
+            <mat-card-content fxLayoutGap="10px" fxLayout="column" fxLayoutAlign="start center">
+                <mat-card-subtitle>Price: {{book.Price}}.0<span style="color: #5dbb74;">$</span></mat-card-subtitle>
+                <mat-card-subtitle fxLayoutAlign="center center">
+                    <mat-icon color="accent">start_rate</mat-icon>{{book.Rating}}.0
+                </mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<mat-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></mat-progress-spinner>

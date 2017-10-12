@@ -1,38 +1,33 @@
+/**
+ * Copyright (c) 2017 Centroida.Ai All rights reserved.
+ */
+
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
-import {MaterialModule} from "./material/material.module";
-import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
-import { SidenavComponent } from './shared/sidenav/sidenav.component';
-import {NasaService} from "./services/nasa.service";
-import {DrinksService} from "./services/drinks.service";
-import { DrinksComponent } from './components/drinks/drinks.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import {PictureOfTheDayComponent} from "./components/picture-of-the-day/picture-of-the-day.component";
+import {AppCustomPreloader} from "./app-custom-preloading";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SidenavComponent,
-    PictureOfTheDayComponent,
-    DrinksComponent,
-    NotFoundComponent
-  ],
-  imports: [
-    RouterModule,
-    routing,
-    BrowserModule,
-    NoopAnimationsModule,
-    FormsModule,
-    HttpModule,
-    MaterialModule
-  ],
-  providers: [NasaService , DrinksService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        RouterModule,
+        routing,
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        HttpModule,
+        SharedModule
+    ],
+    providers: [AppCustomPreloader],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

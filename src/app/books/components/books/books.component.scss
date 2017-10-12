@@ -1,0 +1,35 @@
+/**
+ * Copyright (c) 2017 Centroida.Ai All rights reserved.
+ */
+
+.book-header {
+    height: 85px;
+}
+
+.book-title {
+    color: #70579D;
+    font-weight: 600;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 14em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book-subtitle {
+    color: silver;
+    font-weight: 600;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 12em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
